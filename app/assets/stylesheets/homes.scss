@@ -1,3 +1,500 @@
 // Place all the styles related to the homes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@charset "utf-8";
+/* ---------------------------------------------------------------------------------
+Copyright c HEARTS. All rights reserved.
+
+HTML CSS Selectors common 
+
+$Revision: 3.0 $
+--------------------------------------------------------------------------------- */
+
+/*---------------------------------------------------------------------------------
+font
+--------------------------------------------------------------------------------- */
+
+
+/*---------------------------------------------------------------------------------
+初期設定
+--------------------------------------------------------------------------------- */
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family:'ヒラギノ角ゴ ProN W3','Hiragino Kaku Gothic ProN','メイリオ',Meiryo,'ＭＳ Ｐゴシック','MS PGothic',sans-serif;
+	color: #000;
+	line-height: 1.65;
+	font-size: 12px;
+}
+body {
+	background-color: #FFFEFE;
+}
+
+
+h1,h2,h3,h4,h5,h6,ul {
+	margin: 0px;
+	padding: 0px;
+	border: 0;
+	vertical-align: baseline;
+}
+
+
+@media screen and (max-width: 767px) {
+	img {
+		 max-width: 100%;
+   		 height: auto;
+   		 width /***/:auto;
+	}
+	
+}
+
+
+
+a:hover img {
+	opacity:0.5;
+	filter: alpha(opacity=50);
+	-ms-filter: "alpha( opacity=50 )";
+}
+
+
+a:link {
+	color: #000;
+	text-decoration: none;
+}
+
+a:hover {
+	-webkit-transition: 0.2s ease-in-out;
+	-moz-transition: 0.2s ease-in-out;
+	-o-transition: 0.2s ease-in-out;
+	transition: 0.2s ease-in-out;
+    opacity: 0.5;	
+}
+
+ul {
+	list-style-type: none;
+}
+
+
+/*---------------------------------------------------------------------------------
+ヘッダー
+--------------------------------------------------------------------------------- */
+
+
+.page-header {
+  width: 1280px;
+  height: 135px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.site-name__double {
+  display: block;
+  width: 166px;
+  position: absolute;
+  top: 71px;
+  left: 0;
+}
+.site-name__sons {
+  display: block;
+  width: 154px;
+  position: absolute;
+  top: 55px;
+  right: 0;
+}
+
+#nav-background {
+  width: 100%;
+  position: absolute;
+  top: 82px;
+  left: 0;
+  z-index: 98;
+}
+.site-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+.site-nav li {
+  padding: 0px 27px;
+}
+.site-nav li a {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 17px;
+  line-height: 1;
+  color: #000;
+}
+.site-tel,
+.site-reserve {
+  display: none;
+}
+#toggle_menu {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  body > header {
+    width: 100%;
+    height: 40px;
+    min-width: 100%;
+    /*background-color: rgba(255,255,255,0.50);*/
+    background-color: #fff;
+    border-top:none;
+    border-bottom: 2px solid #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 90;
+  }
+  .page-header {
+    width: 100%;
+    height: 40px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .site-name {
+    width: 100%;
+    height: 40px;
+    position: relative;
+    z-index: 1;
+  }.site-name img {
+    vertical-align: top;
+  }
+  .site-name__double {
+    display: block;
+    width: 57px;
+    position: absolute;
+    top: 14px;
+    left: 5px;
+  }
+  .site-name__sons {
+    display: block;
+    width: 52px;
+    position: absolute;
+    top: 7px;
+    right: 5px;
+  }
+
+  #toggle_menu {
+    display: block;
+    width: 16px;
+    height: 14px;
+    padding: 15px;
+    position: fixed;
+    top: 0px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    z-index: 99;
+    cursor: pointer;
+  }
+  #toggle_menu .inner {
+    width: 16px;
+    height: 14px;
+    position:relative;
+  }
+  #toggle_menu .inner div {
+    width: 16px;
+    height: 1px;
+    background-color: #666666;
+    position: absolute;
+  }
+  .open #toggle_menu .inner div {
+    background-color: #fff;
+  }
+  #toggle_menu .menu1 {
+    top: 0px;
+  }
+  #toggle_menu .menu2 {
+    top: 6px;
+  }
+  #toggle_menu .menu3 {
+    top: 13px;
+  }
+  #toggle_menu .menu1,#toggle_menu .menu2,#toggle_menu .menu3
+  { transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out; /* opera */
+    -moz-transition: all 0.5s ease-out; /* firefox */
+    -webkit-transition: all 0.5s ease-out; /* chrome, safari */
+    -ms-transition: all 0.5s ease-out; /* ie */ }
+  #toggle_menu .menuclick1
+  { top:7px;
+    -moz-transform: rotate(405deg);
+    -webkit-transform: rotate(405deg);
+    -o-transform: rotate(405deg);
+    -ms-transform: rotate(405deg);
+    transform: rotate(405deg);
+  background-color: #fff!important;}
+  #toggle_menu .menuclick2
+  { opacity:0;}
+  #toggle_menu .menuclick3
+  { top:7px;
+    -moz-transform: rotate(-405deg);
+    -webkit-transform: rotate(-405deg);
+    -o-transform: rotate(-405deg);
+    -ms-transform: rotate(-405deg);
+    transform: rotate(-405deg);
+    background-color: #fff!important;
+  }
+  
+  #nav-background {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    left: 0;
+    z-index: 98;
+    background-color: rgba(0,0,0,0.80);
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 0.5s, visibility 0s 0.5s;
+    transition: opacity 0.5s, visibility 0s 0.5s;
+  }
+  .open #nav-background {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+  }
+  .nav-background-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+  }
+  .site-nav {
+    display: block;
+    width: 75%;
+    margin: 0 auto;
+    padding-bottom: 12px;
+  }
+  .site-nav li {
+    padding: 0px 27px 16px;
+  }
+  .site-nav li a {
+    display: block;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+  }
+  .site-tel,
+  .site-reserve {
+    display: block;
+    width: 75%;
+    margin: 0 auto 8px;
+  }
+  .site-tel a {
+    margin-bottom: 21px;
+    font-size: 15px;
+    line-height: 1;
+    text-align: center;
+    color: #fff;
+  }
+  .site-reserve {
+    font-size: 10px;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+  }
+  .site-reserve a {
+    display: block;
+    padding-top: 3px;
+    font-size: 15px;
+    color: #fff;
+  }
+}
+
+body > header #logo {
+	text-align: center;
+	padding-top: 35px;
+	padding-bottom: 30px;
+}
+body > header #logo img {
+	height: 35px;
+	width: auto;
+}
+@media screen and (max-width: 767px) {
+	body > header #logo {
+	width: auto;
+	margin-left: 60px;
+	margin-right: 60px;
+	padding-top: 7px;
+	padding-bottom: 6px;
+	}
+	body > header #logo img {
+		height: 22px;
+
+	}
+}
+
+div#header-tel-pc {
+	position: absolute;
+	top: 50px;
+	right: 20px;
+	font-size: 18px;
+}
+div#header-btn-menu-sp,
+div#header-tel-sp {
+	display:none;
+}
+
+@media screen and (max-width: 767px) {
+	div#header-tel-pc {
+		display:none;
+	}
+	div#header-btn-menu-sp {
+	display: block;
+	width: 17px;
+	height: 15px;
+	position: absolute;
+	top: 50%;
+	left: 24px;
+	margin-top: -7px;
+	}
+	div#header-btn-menu-sp a {
+		width: 17px;
+		height: 15px;
+		text-indent: -9999px;
+		background-image: url(../img/common/icon_sp_menu_2016.png);
+		background-repeat: no-repeat;
+		background-position: left top;
+		background-size: 17px auto;
+	}
+	div#header-btn-menu-sp a.open {
+		background-position: left bottom;
+	}
+	div#header-tel-sp {
+		display:block;
+		width: 24px;
+		height: 30px;
+		position: absolute;
+		top: 6px;
+		right: 7px;
+	}
+	div#header-tel-sp a {
+		display: block;
+		width: 24px;
+		height: 30px;
+		text-indent: -9999px;
+		background-image: url(../img/common/icon_phone_2016.png);
+		background-repeat: no-repeat;
+		background-position: left top;
+		background-size: 24px auto;
+	}
+	div#header-tel-sp a.open {
+		background-position: left bottom;
+	}
+}
+
+body nav {
+}
+body nav ul#pc-menu {
+	width: 1060px;
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+}
+body nav ul#pc-menu li {
+	display: inline-block;
+	/*width: 10%;
+	float: left;*/
+	height: 40px;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+body nav ul#pc-menu li a {
+	display: block;
+/*	position: absolute;
+	left: 0px;
+	top: 0px;*/
+	font-family: 'function_italic';
+	font-size: 18px;
+	line-height: 18px;
+	letter-spacing: 0.2em;
+	text-align: center;
+}
+body nav ul#pc-menu li a:hover {
+	text-decoration: none;
+	-ms-filter: "alpha( opacity=50 )";
+	opacity:0.5;
+}
+body nav ul#pc-menu li span {
+	font-family:'ヒラギノ角ゴ ProN W3','Hiragino Kaku Gothic ProN','メイリオ',Meiryo,'ＭＳ Ｐゴシック','MS PGothic',sans-serif;
+	font-size: 10px;
+	text-align: center;
+	display: block;
+	padding-top: 8px;
+}
+body nav ul#pc-menu li:first-child span {
+	text-indent: 0px;
+}
+body nav div#sp-menu,
+body nav div#sp-reserve {
+		display: none;	
+}
+@media screen and (max-width: 767px) {
+	body nav ul#pc-menu,
+	body nav ul#pc-menu a {
+		display: none !important;
+	}
+	body nav div#sp-menu,
+	body nav div#sp-reserve {
+		width: 100%;
+		height: 100%;
+		margin-right: auto;
+		margin-left: auto;
+		position: fixed;
+		z-index: 100;
+		background-color: #000;
+		-ms-filter: "alpha( opacity=70 )";
+		opacity:0.7;
+	}
+	body nav div#sp-menu table {
+		width: 100%;
+	}
+	body nav div#sp-menu table td {
+		padding-left: 1px;
+		padding-bottom: 1px;
+	}
+	body nav div#sp-menu table td:last-child {
+		padding-right: 1px;
+	}
+	body nav div#sp-menu ul {
+		width: 100%;
+		padding-top: 62px;
+	}
+	body nav div#sp-menu ul li {
+		padding-bottom: 24px;
+	}
+	body nav div#sp-menu ul li a {
+		font-family: 'function_italic';
+		font-size: 15px;
+		line-height: 15px;
+		letter-spacing: 0.2em;
+		text-align: center;
+		color: #fff;
+	}
+	body nav div#sp-reserve ul {
+		position: absolute;
+		width: 100%;
+		top: 50%;
+	}
+	body nav div#sp-reserve ul li {
+		padding: 0 50px 20px;
+		text-align: center;
+	}
+	body nav div#sp-reserve ul li a {
+		text-align: center;
+		font-size: 15px;
+		line-height: 1;
+		color: #fff;
+	}
+}
+
