@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cutmodel: one
+  name: MyString
+  price: 1
+
+two:
+  cutmodel: two
+  name: MyString
+  price: 1
