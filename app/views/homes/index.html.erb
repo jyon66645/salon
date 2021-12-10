@@ -1,4 +1,5 @@
 <body class="">
+
 <header>
   <div class="page-header">
     <h1 class="site-name">
@@ -33,15 +34,18 @@
     </div><!-- / #toggle_menu -->
 </header>
 
-<div class="main_imgBox">
-    <div class="main_img"><%= image_tag 'top/3.jpeg' %></div>
-    <div class="main_img"><%= image_tag 'top/14.jpeg' %></div>
-    <div class="main_img"><%= image_tag 'top/17.jpeg' %></div>
-    <div class="main_img"><%= image_tag 'top/20.jpeg' %></div>
+
+<div id="slide">
+  <ul>
+    <li><%= image_tag 'top/3.jpeg' %></li>
+    <li><%= image_tag 'top/14.jpeg' %></li>
+    <li><%= image_tag 'top/17.jpeg' %></li>
+    <li><%= image_tag 'top/20.jpeg' %></li>
+  </ul>
 </div>
 
-
 </body>
+
 
 <script>
 
@@ -69,6 +73,26 @@ $(function() {
 
 })(jQuery);
 
+
+$(function(){
+// 設定
+
+var $interval = 3000; // 切り替わりの間隔（ミリ秒）
+var $fade_speed = 1000; // フェード処理の早さ（ミリ秒）
+
+$("#slide ul li").hide().css({"position":"absolute","top":0,"left":0});
+$("#slide ul li:first").addClass("active").show();
+
+setInterval(function(){
+  
+var $active = $("#slide ul li.active");
+var $next = $active.next("li").length?$active.next("li"):$("#slide ul li:first");
+
+$active.fadeOut($fade_speed).removeClass("active");
+$next.fadeIn($fade_speed).addClass("active");
+},$interval);
+
+});
 </script>
 
 

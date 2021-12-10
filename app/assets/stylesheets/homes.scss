@@ -77,7 +77,7 @@ ul {
 
 .site-name__double {
   display: block;
-  width: 166px;
+  width: 150px;
   position: absolute;
   top: 71px;
   left: 0;
@@ -486,12 +486,26 @@ body nav div#sp-reserve {
 }
 
 /*--------------------------------------------------------------------------
-トップ画面
+トップ画像
 --------------------------------------------------------------------------*/
 
-.main_imgBox {
-    height: 680px;
-    overflow: hidden;
-    position: relative; 
-  
+.site-name__double {
+  margin-left:50px;
+}
+
+/*3つともabsoluteに*/
+.page-header, #slide {
+  position: absolute;
+}
+
+.page-header {
+  z-index: 2;
+  left: 0;
+  top: 0;
+}
+
+#slide {
+  z-index: 1;
+  left: 0px;
+  top: 0px;
 }
