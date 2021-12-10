@@ -1,5 +1,3 @@
-<body class="">
-
 <header>
   <div class="page-header">
     <h1 class="site-name">
@@ -17,6 +15,7 @@
           <li><%= link_to "Q&A", root_path %></li>
         </ul>
         
+        
         <p class="site-reserve">
           各店共通<a href="https://appt.salondenet.jp/index.php?corpstr=hearts&amp;get=6a5e647258646c3627351f6362676b5c6957716d5b6f6733707269715e63" target="_blank">オンライン予約</a>
         </p>
@@ -24,7 +23,6 @@
     </nav><!-- / #nav-background -->
 
   </div><!-- / .page-header -->
-
     <div id="toggle_menu" class="sp">
       <div class="inner">
         <div class="menu1"></div>
@@ -37,14 +35,25 @@
 
 <div id="slide">
   <ul>
-    <li><%= image_tag 'top/3.jpeg' %></li>
-    <li><%= image_tag 'top/14.jpeg' %></li>
-    <li><%= image_tag 'top/17.jpeg' %></li>
-    <li><%= image_tag 'top/20.jpeg' %></li>
+    <li><%= image_tag 'top/3.jpeg', :size => '1440x500' %></li>
+    <li><%= image_tag 'top/14.jpeg', :size => '1440x500' %></li>
+    <li><%= image_tag 'top/17.jpeg', :size => '1440x500' %></li>
+    <li><%= image_tag 'top/20.jpeg', :size => '1440x500' %></li>
   </ul>
 </div>
 
-</body>
+<div id="slide2">
+  <ul>
+    <li><%= image_tag 'top/3.jpeg', :size => '1440x500' %></li>
+    <li><%= image_tag 'top/14.jpeg', :size => '1440x500' %></li>
+    <li><%= image_tag 'top/17.jpeg', :size => '1440x500' %></li>
+    <li><%= image_tag 'top/20.jpeg', :size => '1440x500' %></li>
+  </ul>
+</div>
+
+
+
+
 
 
 <script>
@@ -76,15 +85,14 @@ $(function() {
 
 $(function(){
 // 設定
-
-var $interval = 3000; // 切り替わりの間隔（ミリ秒）
+var $interval = 5000; // 切り替わりの間隔（ミリ秒）
 var $fade_speed = 1000; // フェード処理の早さ（ミリ秒）
 
 $("#slide ul li").hide().css({"position":"absolute","top":0,"left":0});
 $("#slide ul li:first").addClass("active").show();
 
 setInterval(function(){
-  
+  //alert("aa");
 var $active = $("#slide ul li.active");
 var $next = $active.next("li").length?$active.next("li"):$("#slide ul li:first");
 

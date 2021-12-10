@@ -80,14 +80,14 @@ ul {
   width: 150px;
   position: absolute;
   top: 71px;
-  left: 0;
+  left: 30px;
 }
 .site-name__sons {
   display: block;
   width: 154px;
   position: absolute;
   top: 55px;
-  right: 0;
+  right: -70px;
 }
 
 #nav-background {
@@ -103,6 +103,7 @@ ul {
   align-items: center;
   align-content: center;
   flex-wrap: wrap;
+  margin-left:150px;
 }
 .site-nav li {
   padding: 0px 27px;
