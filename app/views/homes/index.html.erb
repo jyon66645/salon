@@ -1,3 +1,4 @@
+<body class="open">
 <header>
   <div class="page-header">
     <h1 class="site-name">
@@ -30,3 +31,116 @@
       </div>
     </div><!-- / #toggle_menu -->
 </header>
+</body>
+
+<script>
+(function($){
+$(function() {
+  
+	var topBtn = $('#page-top');	
+	topBtn.hide();
+	//スクロールが100に達したらボタン表示
+	$(window).scroll(function () {
+		if ($(this).scrollTop() > 100) {
+			topBtn.fadeIn();
+		} else {
+			topBtn.fadeOut();
+		}
+	});
+	//スクロールしてトップ
+    topBtn.click(function () {
+		$('body,html').animate({
+			scrollTop: 0
+		}, 500);
+		return false;
+    });
+	
+		//ヘッダーメニューボタン
+		$("#toggle_menu").click(function(){
+			$("body").toggleClass("open");
+			$(".menu1").toggleClass("menuclick1");
+			$(".menu2").toggleClass("menuclick2");
+			$(".menu3").toggleClass("menuclick3");
+			if($('body').hasClass('open')) {
+
+			} else {
+				$("#nav-background").addClass('close');
+				setTimeout(function() {
+					$("#nav-background").removeClass('close');
+				}, 500);
+			}
+		});
+  
+	$("a[href=#sp-menu],a[href=#sp-reserve]").click(function(){
+		var target = $(this).attr('href');
+		$(target).toggle();
+		if($(target).is(":hidden")){
+			$(this).removeClass('open');
+		}else{
+			$(this).addClass('open');
+		}
+		return false;
+	});
+	
+//	$('a').removeAttr('target');
+	$("a[href^='http']:not([href*='" + location.hostname + "'])").attr('target', '_blank');
+    $(".blank").attr('target', '_blank');
+	
+	
+		$(".item a").hover(function() {
+			$(this).children('span').stop().animate({opacity:'1'},300);
+		},function() {
+			$(this).children('span').stop().animate({opacity:'0'},300);
+		});
+		
+	//タブ
+		$(".tab-menu li").click(function() {
+			var num = $(".tab-menu li").index(this);
+			$(".tab-contents").addClass('none');
+			$(".tab-contents").eq(num).removeClass('none');
+			$(".tab-contents").css({opacity:'0'}).animate({opacity:'1'},500);
+			$(".tab-menu li").removeClass('current');
+			$(this).addClass('current')
+		});
+		$(".tab-menu-sp li").click(function() {
+			var num = $(".tab-menu-sp li").index(this);
+			$(".tab-contents").addClass('none');
+			$(".tab-contents").eq(num).removeClass('none');
+			$(".tab-contents").css({opacity:'0'}).animate({opacity:'1'},500);
+			$(".tab-menu-sp li").removeClass('current');
+			$(this).addClass('current')
+		});
+
+	
+});
+
+//$(window).load(function() {
+//$(window).on('load resize',function(){
+//	$("#pc-menu").show();
+//	
+//    var array = [];
+//    for(var i = 0; i < $("#pc-menu img").length; i++){
+//        array.push($("#pc-menu img").eq(i).width());
+//    }
+// 
+//    var childElementWidth = 0;
+//    for(var j = 0; j < array.length; j++){
+//        childElementWidth += array[j];
+//    }
+//    if(childElementWidth < 1061) {
+//       $("#pc-menu").width(childElementWidth);
+//    } else {
+//    }
+//	
+//	$('#pc-menu img').each(function(){
+//		var pW = $(this).width();
+//		$(this).parents('li').width(pW);
+//	})
+//	
+//});
+
+})(jQuery);
+
+</script>
+
+
