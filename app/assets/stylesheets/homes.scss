@@ -20,6 +20,7 @@ body {
 }
 
 
+
 h1,h2,h3,h4,h5,h6,ul {
 	margin: 0px;
 	padding: 0px;
@@ -36,6 +37,7 @@ h1,h2,h3,h4,h5,h6,ul {
 	}
 	
 }
+
 
 
 
@@ -95,7 +97,7 @@ ul {
   position: absolute;
   top: 82px;
   left: 0;
-  z-index: 98;
+  //z-index: 98;
 }
 .site-nav {
   display: flex;
@@ -227,13 +229,14 @@ ul {
     background-color: #fff!important;
   }
   
+  
   #nav-background {
     width: 100%;
     height: 100vh;
     position: fixed;
     top: 0px;
     left: 0;
-    z-index: 98;
+    //z-index: 98;
     background-color: rgba(0,0,0,0.80);
     opacity: 0;
     visibility: hidden;
@@ -322,6 +325,7 @@ body > header #logo img {
 	}
 }
 
+
 div#header-tel-pc {
 	position: absolute;
 	top: 50px;
@@ -332,6 +336,7 @@ div#header-btn-menu-sp,
 div#header-tel-sp {
 	display:none;
 }
+
 
 @media screen and (max-width: 767px) {
 	div#header-tel-pc {
@@ -439,7 +444,7 @@ body nav div#sp-reserve {
 		margin-right: auto;
 		margin-left: auto;
 		position: fixed;
-		z-index: 100;
+		//z-index: 100;
 		background-color: #000;
 		-ms-filter: "alpha( opacity=70 )";
 		opacity:0.7;
@@ -461,6 +466,7 @@ body nav div#sp-reserve {
 	body nav div#sp-menu ul li {
 		padding-bottom: 24px;
 	}
+	
 	body nav div#sp-menu ul li a {
 		font-family: 'function_italic';
 		font-size: 15px;
@@ -484,6 +490,10 @@ body nav div#sp-reserve {
 		line-height: 1;
 		color: #fff;
 	}
+	/*-- 要素被り調整 */
+	.hair-style {
+	  margin-top:43%;
+	}
 }
 
 /*--------------------------------------------------------------------------
@@ -503,6 +513,235 @@ body nav div#sp-reserve {
   top: 0px;
 }
 
-.test {
-  position: absolute;
+@media screen and (min-width: 767px) {
+  .hair-style {
+	  margin-top:400px;
+	}
+}
+
+/*--------------------------------------------------------------------------
+ヘアースタイル
+--------------------------------------------------------------------------*/
+
+/*---------------------------------------------------------------------------------
+ニュース
+--------------------------------------------------------------------------------- */
+.top-note {
+  width: 80%;
+  margin: 0 auto;
+ padding-top: 40px;
+  font-family: YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "serif";
+  font-weight: 500;
+}
+.top-note__ttl {
+  padding-bottom: 30px;
+  font-size: 18px;
+  text-align: center;
+  font-weight: 700;
+}
+.top-note p {
+  font-size: 16px;
+  text-align: center;
+}
+.top-note p a {
+  display: inline;
+  text-decoration: underline;
+  color: #03c;
+}
+
+
+.news {
+	width: 1295px;
+  margin: 0 auto 105px;
+  position: relative;
+  z-index: 2;
+}
+.news h2 {
+	padding-bottom: 40px;
+	font-family: 'Cormorant Garamond', serif;
+	font-size: 60px;
+	line-height: 1;
+  font-weight: normal;
+	text-align: center;
+}
+
+.news-list {
+	display: flex;
+  justify-content: space-between;
+}
+.news-list li {
+	width: 373px;
+  background-color: #fff;
+}
+.news-list li a {
+	display: block;
+	background-color: #EEE;
+}
+.news-list li a:hover {
+	opacity: 0.5;	
+}
+.news-list li a span {
+	display: block;
+	text-align: center;
+}
+.news-list li a .photo {
+}
+.news-list li a .photo img {
+	width: 100%;
+  vertical-align: top;
+}
+.news-list li a .detail {
+	padding: 25px 20px 25px;
+}
+.news-list li a .detail .ttl {
+	padding-bottom: 15px;
+	font-size: 13px;
+	line-height: 1.2;
+  text-align: left;
+}
+.news-list li a .detail .category {
+	padding-bottom: 10px;
+	font-family: 'Cormorant Garamond', serif;
+	font-size: 18px;
+	line-height: 1;
+}
+.news-list li a .detail .date {
+	font-family: 'Cormorant Garamond', serif;
+	font-size: 13px;
+	line-height: 1;
+}
+
+.information {
+  width: 680px;
+  margin: 0 auto 120px;
+}
+.information h2 {
+	padding-bottom: 70px;
+	font-family: 'Cormorant Garamond', serif;
+	font-size: 60px;
+	line-height: 1;
+  font-weight: normal;
+	text-align: center;
+}
+.information dl {
+  display: flex;
+  flex-wrap: wrap;
+}
+.information dt {
+  width: 115px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  line-height: 1;
+  padding-bottom: 15px;
+}
+.information dd {
+  width: calc(100% - 115px);
+  padding-top: 2px;
+  padding-bottom: 15px;
+  font-size: 17px;
+}
+
+@media screen and (max-width: 767px) {
+  .top-note__ttl {
+    padding-bottom: 20px;
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+  }
+  .top-note p {
+    font-size: 12px;
+    text-align: center;
+  }
+  .news {
+    width: 100%;
+    margin: 0 auto 58px;
+  }
+  .news h2 {
+    padding-bottom: 48px;
+    font-size: 30px;
+  }
+
+  .news-list {
+    display: block;
+  }
+  .news-list li {
+    width: 100%;
+    background-color: #fff;
+  }
+  .news-list li a {
+   display: flex;
+   flex-wrap: wrap;
+    background-color: #EEE;
+  }
+  .news-list li a:hover {
+    opacity: 0.5;	
+  }
+  .news-list li a span {
+    display: block;
+    text-align: center;
+  }
+  .news-list li a .photo {
+    width: 52%;
+  }
+  .news-list li a .photo img {
+    width: 100%;
+    vertical-align: top;
+  }
+  .news-list li a .detail {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 48%;
+    padding: 60px 10px 35px 25px;
+    position: relative;
+  }
+  .news-list li a .detail .ttl {
+    padding-bottom: 15px;
+    font-size: 12px;
+    line-height: 1.2;
+    text-align: left; 
+  }
+  .news-list li a .detail .category {
+    padding-bottom: 10px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    line-height: 1;
+    text-align: left;
+  }
+  .news-list li a .detail .date {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 13px;
+    line-height: 1;
+    position: absolute;
+    top: 35px;
+    left: 28px;
+  }
+
+  .information {
+    width: 90%;
+    margin: 0 auto 70px;
+  }
+  .information h2 {
+    padding-bottom: 35px;
+    font-size: 30px;
+  }
+  .information dl {
+    display: block;
+  }
+  .information dt {
+    width: 100%;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    line-height: 1;
+    padding-bottom: 15px;
+  }
+  .information dd {
+    width: 100%;
+    padding-top: 0;
+    padding-bottom: 30px;
+    font-size: 12px;
+    font-weight: bold;
+  }
 }

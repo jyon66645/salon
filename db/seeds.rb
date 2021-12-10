@@ -113,8 +113,8 @@ Picture.create!(image: "model6/naka960a.jpeg", cutmodel_id: 6)
 Picture.create!(image: "model6/naka960d.jpeg", cutmodel_id: 6)
 
 Picture.create!(image: "model7/style 5.jpeg", cutmodel_id: 7)
-Picture.create!(image: "model7/style 1.jpeg", cutmodel_id: 7)
-Picture.create!(image: "model7/style 2.jpeg", cutmodel_id: 7)
+Picture.create!(image: "model7/style1.jpeg", cutmodel_id: 7)
+Picture.create!(image: "model7/style2.jpeg", cutmodel_id: 7)
 
 Picture.create!(image: "model8/long_hairstyle_44_1.jpeg", cutmodel_id: 8)
 Picture.create!(image: "model8/long_hairstyle_44_3.jpeg", cutmodel_id: 8)
