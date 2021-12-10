@@ -32,7 +32,6 @@
     </div><!-- / #toggle_menu -->
 </header>
 
-
 <div id="slide">
   <ul>
     <li><%= image_tag 'top/3.jpeg', :size => '1440x500' %></li>
@@ -50,6 +49,11 @@
     <li><%= image_tag 'top/20.jpeg', :size => '1440x500' %></li>
   </ul>
 </div>
+
+<h1>aa</h1>
+
+
+
 
 
 
@@ -98,6 +102,25 @@ var $next = $active.next("li").length?$active.next("li"):$("#slide ul li:first")
 
 $active.fadeOut($fade_speed).removeClass("active");
 $next.fadeIn($fade_speed).addClass("active");
+},$interval);
+
+});
+
+$(function(){
+// 設定
+var $interval = 5000; // 切り替わりの間隔（ミリ秒）
+var $fade_speed = 1000; // フェード処理の早さ（ミリ秒）
+
+$("#slide2 ul li").hide().css({"position":"absolute","top":0,"left":0});
+$("#slide2 ul li:first").addClass("active").show();
+
+setInterval(function(){
+  //alert("aa");
+var $active2 = $("#slide2 ul li.active");
+var $next2 = $active2.next("li").length?$active2.next("li"):$("#slide2 ul li:first");
+
+$active2.fadeOut($fade_speed).removeClass("active");
+$next2.fadeIn($fade_speed).addClass("active");
 },$interval);
 
 });
