@@ -526,29 +526,6 @@ body nav div#sp-reserve {
 /*---------------------------------------------------------------------------------
 ニュース
 --------------------------------------------------------------------------------- */
-.top-note {
-  width: 80%;
-  margin: 0 auto;
- padding-top: 40px;
-  font-family: YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "serif";
-  font-weight: 500;
-}
-.top-note__ttl {
-  padding-bottom: 30px;
-  font-size: 18px;
-  text-align: center;
-  font-weight: 700;
-}
-.top-note p {
-  font-size: 16px;
-  text-align: center;
-}
-.top-note p a {
-  display: inline;
-  text-decoration: underline;
-  color: #03c;
-}
-
 
 .news {
 	width: 1295px;
@@ -565,16 +542,16 @@ body nav div#sp-reserve {
 	text-align: center;
 }
 
-.news-list {
-	display: flex;
-  justify-content: space-between;
-}
+
+@media screen and (min-width: 767px) {
+
 .news-list li {
+  
 	width: 373px;
   background-color: #fff;
+  
 }
 .news-list li a {
-	display: block;
 	background-color: #EEE;
 }
 .news-list li a:hover {
@@ -611,34 +588,12 @@ body nav div#sp-reserve {
 	line-height: 1;
 }
 
-.information {
-  width: 680px;
-  margin: 0 auto 120px;
+.news-list li {
+  
+	display:inline;
+  
 }
-.information h2 {
-	padding-bottom: 70px;
-	font-family: 'Cormorant Garamond', serif;
-	font-size: 60px;
-	line-height: 1;
-  font-weight: normal;
-	text-align: center;
-}
-.information dl {
-  display: flex;
-  flex-wrap: wrap;
-}
-.information dt {
-  width: 115px;
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 28px;
-  line-height: 1;
-  padding-bottom: 15px;
-}
-.information dd {
-  width: calc(100% - 115px);
-  padding-top: 2px;
-  padding-bottom: 15px;
-  font-size: 17px;
+
 }
 
 @media screen and (max-width: 767px) {
