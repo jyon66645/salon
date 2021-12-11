@@ -528,10 +528,10 @@ body nav div#sp-reserve {
 --------------------------------------------------------------------------------- */
 
 .news {
-	width: 1295px;
-  margin: 0 auto 105px;
-  position: relative;
-  z-index: 2;
+	//width: 1295px;
+  //margin: 0 auto 105px;
+  //position: relative;
+  //z-index: 2;
 }
 .news h2 {
 	padding-bottom: 40px;
@@ -540,6 +540,7 @@ body nav div#sp-reserve {
 	line-height: 1;
   font-weight: normal;
 	text-align: center;
+	margin-left:30px;
 }
 
 
@@ -604,7 +605,7 @@ body nav div#sp-reserve {
 
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1100px) {
   .top-note__ttl {
     padding-bottom: 20px;
     font-size: 16px;
@@ -708,3 +709,101 @@ body nav div#sp-reserve {
     font-weight: bold;
   }
 }
+
+.btn {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 25px;
+    line-height: 1;
+    text-align: center;
+    margin-top:40px;
+    
+}
+
+@media screen and (max-width: 767px) {
+  .btn {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px;
+    line-height: 1;
+    text-align: center;
+    margin-top:40px;
+    
+  }
+}
+
+/*--------------------------------------------------------------
+スタイリスト
+--------------------------------------------------------------*/
+
+#staff {
+	width: 100%;
+  margin-top: 70px;
+  position: relative;
+}
+
+#staff h2 {
+  box-sizing: border-box;
+  padding-bottom: 60px;
+  background-color: #fff;
+	font-family: 'Cormorant Garamond', serif;
+	font-size: 60px;
+	line-height: 1;
+  font-weight: normal;
+	text-align: center;
+  z-index: 10;
+}
+.staff_img {
+  width: 66.4%;
+  max-width: 1275px;
+  margin: 0 auto;
+}
+.staff_img img {
+  width: 100%;
+  height: auto;
+}
+
+
+
+@media screen and (max-width: 767px) {
+  #staff {
+    width: auto;
+    margin-top: 0px;
+    margin-bottom: 100px;
+  }
+  #staff:before {
+    content:none;
+  }
+  #staff h2 {
+    padding-bottom: 33px;
+    font-size: 30px;
+    
+  }
+  .staff_img {
+    width: 94%;
+    margin: 0 auto;
+  }
+  .staff_img img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+/*
+#staff {
+  padding-bottom: 40px;
+	font-family: 'Cormorant Garamond', serif;
+	font-size: 50px;
+	line-height: 1;
+  font-weight: normal;
+	text-align: center;
+	margin-left:0px;
+}
+
+#staff h2 {
+  margin-top:150px;
+}
+
+#staff .staff_img {
+  margin-top:80px;
+}
+*/
