@@ -544,13 +544,26 @@ body nav div#sp-reserve {
 
 
 @media screen and (min-width: 767px) {
+  
+.news-list {
+  display : flex;
+}
 
 .news-list li {
-  
-	width: 373px;
+	//width: 373px;
+	//height: 373px;
+	margin:20px;
   background-color: #fff;
+  justify-content: space-between;
+  -webkit-flex-wrap: nowrap; 
   
 }
+
+.hair-icon {
+  width: 350px;
+	height: 350px;
+}
+
 .news-list li a {
 	background-color: #EEE;
 }
@@ -588,11 +601,6 @@ body nav div#sp-reserve {
 	line-height: 1;
 }
 
-.news-list li {
-  
-	display:inline;
-  
-}
 
 }
 

@@ -59,7 +59,7 @@
               <% @model_ids[0].each do |id| %>
               <li>
                 <a href="Double/hair_style/3/812.html">
-                  <div class="photo"><%= image_tag Picture.find(id).image %></div>
+                  <div class="photo"><%= image_tag Picture.find(id).image, class: "hair-icon" %></div>
                   <div class="detail"><span class="ttl">コンパクトなショートボブ</span><span class="category">BOB NEW HAIR</span><span class="date">2021 12.07</span></div>
                 </a>
               </li> 
@@ -67,27 +67,31 @@
             </ul>
         
         
-        <% @model_ids[1].each do |id| %>
-            <ul class="news-list">
-              <li>
-                <a href="Double/hair_style/3/812.html">
-                  <div class="photo"><%= image_tag Picture.find(id).image %></div>
-                  <div class="detail"><span class="ttl">コンパクトなショートボブ</span><span class="category">BOB NEW HAIR</span><span class="date">2021 12.07</span></div>
-                </a>
-              </li> 
-            </ul>
-        <% end %>
         
-        <% @model_ids[2].each do |id| %>
             <ul class="news-list">
+              <% @model_ids[1].each do |id| %>
               <li>
                 <a href="Double/hair_style/3/812.html">
-                  <div class="photo"><%= image_tag Picture.find(id).image %></div>
+                  <div class="photo"><%= image_tag Picture.find(id).image, class: "hair-icon" %></div>
                   <div class="detail"><span class="ttl">コンパクトなショートボブ</span><span class="category">BOB NEW HAIR</span><span class="date">2021 12.07</span></div>
                 </a>
               </li> 
+              <% end %>
             </ul>
-        <% end %>
+        
+        
+        
+            <ul class="news-list">
+              <% @model_ids[2].each do |id| %>
+              <li>
+                <a href="Double/hair_style/3/812.html">
+                  <div class="photo"><%= image_tag Picture.find(id).image, class: "hair-icon" %></div>
+                  <div class="detail"><span class="ttl">コンパクトなショートボブ</span><span class="category">BOB NEW HAIR</span><span class="date">2021 12.07</span></div>
+                </a>
+              </li> 
+              <% end %>
+            </ul>
+        
       </div>
     </section>
 </div>
