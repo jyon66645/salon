@@ -1,3 +1,44 @@
 // Place all the styles related to the pictures controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.hair-index-body {
+  margin: 20px;   /* 外側の余白を40pxにする */
+  padding: 0;      /* 内側の余白を消す(念のため) */
+  //background:red;
+}
+
+.search-form {
+  white-space: nowrap;
+  //background:red;
+  margin-left:130px;
+  //text-align:center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  line-height: 5;
+  //color: #fff;
+}
+
+#q_category_eq_new_line,#q_category_eq_short, #q_category_eq_bob,
+#q_category_eq_medium, #q_category_eq_long, #q_category_eq_mens, #q_category_eq_arrenge {
+    margin-left:30px;
+}
+
+#text {
+    margin-right:20px;
+}
+
+
+
+.image-all {
+  
+}
+
+.hair-picture {
+  height:280px;
+  width:350px;
+  margin:10px;
+  //padding:20px 20px;
+}
+
+

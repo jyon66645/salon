@@ -1,0 +1,71 @@
+<header>
+  <div class="page-header">
+    <h1 class="site-name">
+      <a href="/" class="site-name__double"><%= image_tag 'logo_double.png' %></a>
+      <a href="/" class="site-name__sons"><%= image_tag "logo_sons.png" %></a>
+    </h1>
+    <nav id="nav-background" class="">
+      <div class="nav-background-inner">
+        <ul class="site-nav">
+          <li><%= link_to "HAIR", pictures_path %></li>
+          <li><%= link_to "STAFF", root_path %></li>
+          <li><%= link_to "INFO", root_path %></li>
+          <li><%= link_to "PRICE", root_path %></li>
+          <li><%= link_to "ACCESS", root_path %></li>
+          <li><%= link_to "Q&A", root_path %></li>
+        </ul>
+        
+        <p class="site-reserve">
+          各店共通<a href="#" target="_blank">オンライン予約</a>
+        </p>
+      </div>
+    </nav><!-- / #nav-background -->
+
+  </div><!-- / .page-header -->
+</header>
+
+<div class="hair-index-body">
+  <div class="search-form">
+    <%= search_form_for @q, url: pictures_path do |f| %>
+    
+      <%= f.radio_button :category_eq, "NEW LINE" %>NEW LINE
+      <%= f.radio_button :category_eq, "Short" %>SHORT
+      <%= f.radio_button :category_eq, "BOB" %>BOB
+      <%= f.radio_button :category_eq, "Medium" %>MEDIUM
+      <%= f.radio_button :category_eq, "Long" %>LONG
+      <%= f.radio_button :category_eq, "MENs" %>MENs
+      <%= f.radio_button :category_eq, "ARRENGE" %>ARRENGE
+    
+      <%= f.submit "検索" %>
+    <% end %>
+  </div>
+
+  <div class="image-all">
+    <table align="center">
+        <tr>
+          <% @result[0].each do |result| %>
+            <td><%= image_tag Picture.find_by(cutmodel_id: result.id).image, class: "hair-picture" %></td>
+          <% end %>
+        </tr>
+    </table>
+    
+    <table align="center">
+        <tr>
+          <% @result[1].each do |result| %>
+            <td><%= image_tag Picture.find_by(cutmodel_id: result.id).image, class: "hair-picture" %></td>
+          <% end %>
+        </tr>
+    </table>
+    
+    
+    <table align="center">
+        <tr>
+          <% @result[2].each do |result| %>
+            <td><%= image_tag Picture.find_by(cutmodel_id: result.id).image, class: "hair-picture" %></td>
+          <% end %>
+        </tr>
+    </table>
+  </div>
+
+</div>
+
