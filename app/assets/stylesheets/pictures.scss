@@ -1,49 +1,57 @@
-// Place all the styles related to the pictures controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
 
 .hair-index-body {
-  margin: 20px;   /* 外側の余白を40pxにする */
-  padding: 0;      /* 内側の余白を消す(念のため) */
-  //background:red;
-}
+  margin: 20px;
+  /* 外側の余白を40pxにする */
+  padding: 0;
+  /* 内側の余白を消す(念のため) */ }
 
 .search-form {
   white-space: nowrap;
-  background:red;
-  margin-left:120px;
-  //text-align:center;
+  margin-left: 80px;
   font-family: 'Cormorant Garamond', serif;
   font-size: 22px;
-  line-height: 5;
+  line-height: 5; 
+  
 }
 
-#q_category_eq_new_line,#q_category_eq_short, #q_category_eq_bob,
+.cutmodel_search {
+    //background:red;
+    height:170px;
+}
+
+#q_category_eq_new_line, #q_category_eq_short, #q_category_eq_bob,
 #q_category_eq_medium, #q_category_eq_long, #q_category_eq_mens, #q_category_eq_arrenge {
-    display: inline-block;
-    margin:0px 5px 0px 30px;
-}
-
+  display: inline-block;
+  margin: 0px 5px 0px 30px; }
+  
 .submit {
-  //margin-left:30px;
-  //background:red;
+	display: block;
+	position: relative;
+	width: 160px;
+	padding: 0.8em;
+	text-align: center;
+	text-decoration: none;
+	color: black;
+	background: white;
+	border-radius: 4px;
+	margin-left:410px;
+	font-family: 'Cormorant Garamond', serif;
+	
 }
-
-#text {
-    margin-right:20px;
-}
-
-
+.submit:hover {
+	 opacity:0.8;
+	 cursor: pointer;
+	 text-decoration: none;
+}  
 
 .image-all {
-  background:red;
+    //background:red;
 }
 
 .hair-picture {
-  height:280px;
-  width:350px;
-  margin:10px;
-  //padding:20px 20px;
-}
-
+  height: 280px;
+  width: 350px;
+  margin: 10px; }
+  
+  
 
