@@ -36,11 +36,13 @@
       <%= f.radio_button :category_eq, "MENs" %>MENs
       <%= f.radio_button :category_eq, "ARRENGE" %>ARRENGE
     
-      <%= f.submit "検索" %>
+      <br><%= f.submit "絞り込む", class: "submit" %>
     <% end %>
   </div>
 
+  
   <div class="image-all">
+    <% if !@result[0].nil? %>
     <table align="center">
         <tr>
           <% @result[0].each do |result| %>
@@ -48,7 +50,9 @@
           <% end %>
         </tr>
     </table>
+    <% end %>
     
+    <% if !@result[1].nil? %>
     <table align="center">
         <tr>
           <% @result[1].each do |result| %>
@@ -56,8 +60,9 @@
           <% end %>
         </tr>
     </table>
+    <% end %>
     
-    
+    <% if !@result[2].nil? %>
     <table align="center">
         <tr>
           <% @result[2].each do |result| %>
@@ -65,6 +70,7 @@
           <% end %>
         </tr>
     </table>
+    <% end %>
   </div>
 
 </div>
