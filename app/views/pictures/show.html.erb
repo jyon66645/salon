@@ -24,22 +24,21 @@
   </div><!-- / .page-header -->
 </header>
 
-<article id="detail"> 
-    <ul id="tumb-pc">
- 　    <% Picture.where(cutmodel_id: @cutmodel.id).each do |picture| %>
-        <li class="select"><%= picture.image %></li> 
-      <% end %>
+
+
+
+<div class="hair-show">
+    <ul id="imagelist" class="imagelist">
+ 　   
     </ul>
-    <div id="main-style-image">
-      <ul class="slides">
- 
-      <li class="image" style="opacity: 1;"><span><img src="content/images/SONS/tsuchikawa/konnpakutoshortbob/bob86_4.jpg"></span></li> 
-      <li class="image disnon" style="opacity: 1;"><span><img src="content/images/SONS/tsuchikawa/konnpakutoshortbob/bob86_2.jpg"></span></li> 
-      <li class="image disnon" style="opacity: 1;"><span><img src="content/images/SONS/tsuchikawa/konnpakutoshortbob/bob86_3.jpg"></span></li> 
-      <li class="image disnon" style="opacity: 1;"><span><img src="content/images/SONS/tsuchikawa/konnpakutoshortbob/bob86_1.jpg"></span></li>
-      </ul>
-    </div>
     
+    <div class="mainImage">
+        <img id="mainImage">
+    </div>
+</div>
+    
+
+    <!--
     <div id="info01-block" class="">
       <div id="stylist"> 
         <h3>Stylist</h3>
@@ -90,5 +89,28 @@
         <li><a href="Double/hair_style/3/45.html"><img src="content/images/Double/hairstyle/matsui/bob62/bob_hairstyle62_top.jpg" alt="ボブヘアスタイル62"></a></li>        <li><a href="Double/hair_style/3/22.html"><img src="content/images/Double/hairstyle/uchida/bob_hairstyle20_1.jpg" alt="ボブヘアスタイル20"></a></li>        <li><a href="Double/hair_style/3/23.html"><img src="content/images/Double/hairstyle/shigeno/bob_hairstyle24_1.jpg" alt="ボブヘアスタイル24"></a></li>        <li><a href="Double/hair_style/3/4.html"><img src="content/images/Double/hairstyle/urushibara/bob_hairstyle4_1.jpg" alt="ボブヘアスタイル4"></a></li>
       </ul>
     </div>
+    -->
 
-  </article>
+ 
+  
+  <script>
+      
+      var imageTotalNumber = <%= Picture.where(cutmodel_id: @cutmodel.id).length.to_i %>;
+      var mainImageElement = document.getElementById("mainImage");
+      var imageListElement = document.getElementById("imagelist");
+      
+      
+      mainImageElement.setAttribute("src", "/assets/model1/nishimura2.jpeg");
+      
+      for (  var i = 0;  i < imageTotalNumber;  i++  ) {
+ 
+        var liElement = document.createElement("li");
+        console.log(imageListElement);
+        liElement.style.backgroundImage = `url(/assets/model1/nishimura${i + 1}.jpeg)`;
+        
+        imageListElement.appendChild(liElement);
+      }
+      
+      //console.log(pictures);
+      
+  </script
