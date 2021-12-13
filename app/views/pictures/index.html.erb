@@ -47,7 +47,7 @@
     <table align="center">
         <tr>
           <% @result[0].each do |result| %>
-            <td><%= image_tag Picture.find_by(cutmodel_id: result.id).image, class: "hair-picture" %></td>
+            <td><%= link_to image_tag(Picture.find_by(cutmodel_id: result.id).image, class:"hair-picture"), pictures_show_path(result.id) %></td>
           <% end %>
         </tr>
     </table>
@@ -57,7 +57,7 @@
     <table align="center">
         <tr>
           <% @result[1].each do |result| %>
-            <td><%= image_tag Picture.find_by(cutmodel_id: result.id).image, class: "hair-picture" %></td>
+            <td><%= link_to image_tag(Picture.find_by(cutmodel_id: result.id).image, class:"hair-picture"), pictures_show_path(result.id) %></td>
           <% end %>
         </tr>
     </table>
@@ -67,7 +67,7 @@
     <table align="center">
         <tr>
           <% @result[2].each do |result| %>
-            <td><%= image_tag Picture.find_by(cutmodel_id: result.id).image, class: "hair-picture" %></td>
+            <td><%= link_to image_tag(Picture.find_by(cutmodel_id: result.id).image, class:"hair-picture"), pictures_show_path(result.id) %></td>
           <% end %>
         </tr>
     </table>

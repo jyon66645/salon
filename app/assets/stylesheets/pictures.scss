@@ -67,6 +67,484 @@
 	border-bottom:solid 3px #EEEEEE;
 }
   
+/*----------------------------------------------------------------
+SHOWページ
+----------------------------------------------------------------*/
+
+/*---------------------------------------------------------------------------------
+詳細
+--------------------------------------------------------------------------------- */
+#detail {
+	padding-top: 145px;
+	position: relative;
+}
+
+#detail #tumb-pc {
+	text-align: center;
+	height: 72px;
+}
+#detail #tumb-pc li {
+	display: inline;
+	cursor: pointer;
+	filter: alpha(opacity=50);
+	-moz-opacity:0.5;
+	opacity:0.5;
+}
+#detail #tumb-pc li.select {
+	filter: alpha(opacity=100);
+	-moz-opacity:1;
+	opacity:1;
+}
+
+#detail #main-style-image {
+	height: 550px;
+	width: 960px;
+	padding-right: 50px;
+	padding-left: 50px;
+	border-bottom: 1px solid #000;
+}
+
+
+#detail #main-style-image .image {
+	text-align: center;
+	filter: alpha(opacity=0);
+	-moz-opacity:0;
+	opacity:0;
+}
+#detail #main-style-image .none {
+	display:block;
+}
+#detail #main-style-image .image img {
+	height: 550px;
+	width: auto;
+}
+#detail #main-style-image .disnon,
+#detail #main-style-image .disnon.none {
+	display: none;
+}
+
+#detail #info01-block {
+	width: 960px;
+	position: absolute;
+	top: 250px;
+	left:50px;
+}
+
+#detail #info01-block.left h3,
+#detail #info01-block.left h4,
+#detail #info01-block.left p {
+	text-align: left;
+}
+#detail #info01-block.right h3,
+#detail #info01-block.right h4,
+#detail #info01-block.right p {
+	text-align: right;
+}
+#detail #info01-block #stylist {
+	padding-bottom: 80px;
+}
+#detail #info01-block #stylist h3 {
+	font-family: Cinzel, serif;
+	font-size: 20px;
+	line-height: 20px;
+	font-weight: normal;
+	padding-bottom: 15px;
+	letter-spacing: 2px;
+}
+#detail #info01-block #stylist p {
+	font-family: Cinzel, serif;
+	font-size: 24px;
+	line-height: 24px;
+	font-weight: normal;
+	padding-bottom: 18px;
+	letter-spacing: 2px;
+}
+#detail #info01-block #stylist p a {
+	font-family: Cinzel, serif;
+	font-size: 24px;
+	line-height: 24px;
+	font-weight: normal;
+	letter-spacing: 2px;
+}
+#detail #info01-block #stylist h4 {
+	font-family: 'Linden Hill', serif;
+	font-size: 18px;
+	line-height: 18px;
+	font-weight: normal;
+	padding-bottom: 5px;
+}
+#detail #info01-block #stylist p.tel a {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 18px;
+	line-height: 18px;
+	font-weight: normal;
+	padding-bottom: 15px;
+}
+
+#detail #info01-block #price {}
+#detail #info01-block #price h3 {
+	font-family: Cinzel, serif;
+	font-size: 20px;
+	line-height: 20px;
+	font-weight: normal;
+	padding-bottom: 15px;
+	letter-spacing: 5px;
+}
+#detail #info01-block #price p {
+	font-size: 14px;
+}
+
+
+#detail #info02-block {
+	padding-top: 15px;
+	padding-bottom: 35px;
+	width: 960px;
+	margin-right: auto;
+	margin-left: auto;
+}
+#detail #info02-block h4 {
+	text-align: center;
+	padding-bottom: 20px;
+}
+#detail #info02-block h4 img {
+	height: auto;
+	width: 244px;
+}
+#detail #info02-block p {
+	font-size: 14px;
+	line-height: 30px;
+	text-align: center;
+	padding-bottom: 1.5em;
+}
+
+#detail #info02-block .commnet p {
+	color: #000;
+}
+#detail #info02-block .howto p {
+	color: #666600;
+}
+
+
+#detail #more_style {}
+#detail #pickup_style {}
+
+#detail #more_style h3,
+#detail #pickup_style h3 {
+	font-family: Cinzel, serif;
+	font-size: 24px;
+	line-height: 24px;
+	font-weight: normal;
+	text-align: center;
+	padding-bottom: 12px;
+	border-bottom: 3px solid #000;
+	margin-bottom: 18px;
+	letter-spacing: 5px;
+}
+#detail #more_style ul {
+	text-align: center;
+	padding-bottom: 30px;
+}
+#detail #more_style li {
+	display: inline-block;
+}
+#detail #more_style li:nth-of-type(2) {
+	padding-right: 6px;
+	padding-left: 6px;
+}
+#detail #more_style li img {
+	height: 200px;
+	width: auto;
+}
+#detail #more_style ul#other-pc{
+	display: block;
+}
+#detail #more_style ul#other-sp {
+	display: none;
+}
+
+#detail #pickup_style ul {
+}
+#detail #pickup_style li {
+	float: left;
+	width: 245px;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+#detail #pickup_style li img {
+	height: auto;
+	width: 100%;
+}
+
+
+div#topic-path2 {
+	width: 100%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+div#topic-path2 div {
+	height: 16px;
+	padding-top: 12px;
+	padding-left: 10px;
+	font-size: 12px;
+	line-height: 12px;
+	width: 1050px;
+	margin-right: auto;
+	margin-left: auto;
+}
+div#topic-path2 a {
+	font-size: 12px;
+	line-height: 12px;
+}
+
+@media screen and (max-width: 767px) {
+	
+#detail {
+	padding-top: 15px;
+	position: relative;
+}
+
+#detail #tumb-pc,
+div#topic-path2 {
+	display: none;	
+}
+
+#detail #main-style-image {
+	height: auto;
+	width: 100%;
+	padding-right: 0px;
+	padding-left: 0px;
+	border-bottom: 1px solid #000;
+	padding-bottom: 3px;
+	margin-bottom: 40px;
+	position: relative;
+}
+#detail #main-style-image .image {
+	text-align: center;
+	filter: alpha(opacity=100);
+	-moz-opacity:1;
+	opacity:1;
+}
+#detail #main-style-image .image span {
+	display: table-cell;
+	vertical-align: middle;
+	height: 100%;
+	width: 100%;
+}
+#detail #main-style-image .image img {
+	height: auto;
+	width: 100%;
+}
+#detail #main-style-image .none {
+	display: none;
+}
+#detail #main-style-image .flex-control-nav,
+#detail #main-style-image .flex-direction-nav {
+	position: absolute;
+	bottom: -30px;
+	width: 100%;
+}
+#detail #main-style-image .flex-control-paging {
+	text-align: center;
+}
+#detail #main-style-image .flex-control-paging li {
+	display: inline-block;
+	height: 13px;
+	width: 13px;
+	margin-right: 5px;
+	margin-left: 5px;
+}
+#detail #main-style-image .flex-control-paging li a {
+	display: inline-block;
+	height: 10px;
+	width: 10px;
+	text-indent: -9999px;
+	border: 1px solid #000;
+	-webkit-border-radius:  6px;
+    -moz-border-radius:     6px;
+    -o-border-radius:       6px;
+    border-radius:          6px;
+}
+#detail #main-style-image .flex-control-paging li a.flex-active {
+	background-color: #000;
+}
+#detail #main-style-image .flex-prev {
+	position: absolute;
+	left: 10px;
+	top: -22px;
+}
+#detail #main-style-image .flex-next {
+	position: absolute;
+	top: -22px;
+	right: 10px;
+}
+
+#detail #info01-block {
+	width: 100%;
+	position: static;
+	top: 150px;
+	padding-top: 25px;
+}
+
+#detail #info01-block.left h3,
+#detail #info01-block.left h4,
+#detail #info01-block.left p {
+	text-align: center;
+}
+#detail #info01-block.right h3,
+#detail #info01-block.right h4,
+#detail #info01-block.right p {
+	text-align: center;
+}
+#detail #info01-block #stylist {
+	padding-bottom: 15px;
+}
+#detail #info01-block #stylist h3 {
+	font-family: Cinzel, serif;
+	font-size: 10px;
+	line-height: 10px;
+	font-weight: normal;
+	padding-bottom: 2px;
+	letter-spacing: 2px;
+}
+#detail #info01-block #stylist p {
+	font-family: Cinzel, serif;
+	font-size: 14px;
+	line-height: 14px;
+	font-weight: normal;
+	padding-bottom: 18px;
+	letter-spacing: 2px;
+}
+#detail #info01-block #stylist p a {
+	font-family: Cinzel, serif;
+	font-size: 14px;
+	line-height: 14px;
+	font-weight: normal;
+	letter-spacing: 2px;
+}
+#detail #info01-block #stylist h4 {
+	font-family: 'Linden Hill', serif;
+	font-size: 13px;
+	line-height: 13px;
+	font-weight: normal;
+	padding-bottom: 5px;
+}
+#detail #info01-block #stylist p.tel a {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 13px;
+	line-height: 3px;
+	font-weight: normal;
+	padding-bottom: 12px;
+}
+
+#detail #info01-block #price {}
+#detail #info01-block #price h3 {
+	font-family: Cinzel, serif;
+	font-size: 14px;
+	line-height: 14px;
+	font-weight: normal;
+	padding-bottom: 15px;
+	letter-spacing: 5px;
+}
+#detail #info01-block #price p {
+	font-size: 13px;
+}
+
+
+#detail #info02-block {
+	padding-bottom: 35px;
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+}
+#detail #info02-block h4 {
+	padding-top: 30px;
+	padding-bottom: 10px;
+}
+#detail #info02-block h4 img {
+	width: 154px;
+	height:auto;
+}
+#detail #info02-block p {
+	font-size: 12px;
+	line-height: 24px;
+	text-align: left;
+	padding-bottom: 1.5em;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+#detail #info02-block .commnet p {
+	color: #000;
+}
+#detail #info02-block .howto p {
+	color: #666600;
+}
+
+
+#detail #more_style {}
+#detail #pickup_style {}
+
+#detail #more_style h3,
+#detail #pickup_style h3 {
+	font-family: Cinzel, serif;
+	font-size: 14px;
+	line-height: 14px;
+	font-weight: normal;
+	text-align: center;
+	padding-bottom: 6px;
+	border-bottom: 3px solid #000;
+	margin-bottom: 18px;
+	letter-spacing: 5px;
+}
+#detail #more_style {
+	width: 100%;
+}
+#detail #more_style ul {
+	text-align: center;
+}
+#detail #more_style ul:after {
+	content: ""; 
+	display: block;
+	clear: both;
+	height: 0;
+}
+#detail #more_style li {
+	display: block;
+	float: left;
+	width: 32%;
+}
+#detail #more_style li:nth-of-type(2) {
+	padding-right:2%;
+	padding-left: 2%;
+}                           
+#detail #more_style li img {
+	height: auto;
+	width: 100%;
+}
+#detail #more_style ul#other-pc{
+	display: none;
+}
+#detail #more_style ul#other-sp {
+	display: block;
+}
+
+#detail #pickup_style ul {
+}
+#detail #pickup_style li {
+	float: left;
+	width: 48%;
+	padding-right: 1%;
+	padding-left: 1%;
+	padding-bottom: 10px;
+}
+#detail #pickup_style li:nth-of-type(2n+1) {
+	clear: left;
+}
+#detail #pickup_style li img {
+}
+
+}
+
   
   
 
