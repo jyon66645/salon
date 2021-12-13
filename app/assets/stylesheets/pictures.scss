@@ -7,7 +7,7 @@
 
 .search-form {
   white-space: nowrap;
-  margin-left: 80px;
+  margin-left: 8%;
   font-family: 'Cormorant Garamond', serif;
   font-size: 22px;
   line-height: 5; 
@@ -25,8 +25,8 @@
   margin: 0px 5px 0px 30px; }
   
 .submit {
-	display: block;
-	position: relative;
+	//display: block;
+	//position: relative;
 	width: 160px;
 	padding: 0.8em;
 	text-align: center;
@@ -34,7 +34,7 @@
 	color: black;
 	background: white;
 	border-radius: 4px;
-	margin-left:410px;
+	margin-left:1%;
 	font-family: 'Cormorant Garamond', serif;
 	
 }
@@ -51,7 +51,22 @@
 .hair-picture {
   height: 280px;
   width: 350px;
-  margin: 10px; }
+  margin: 10px;
+ }
+ 
+ 
+ #ttl-list {
+	width: 100%;
+	min-width: 1060px;
+	background-repeat: repeat-x;
+	background-position: center top;
+	text-align: center;
+	margin-bottom: 40px;
+	margin-top: 10px;
+	border-top:solid 3px #EEEEEE;
+	border-bottom:solid 3px #EEEEEE;
+}
+  
   
   
 

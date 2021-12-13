@@ -6,5 +6,6 @@ class PicturesController < ApplicationController
     end
     
     def show
+        @cutmodel = Cutmodel.find(params[:_id])
     end
 end
