@@ -102,11 +102,16 @@
       
       mainImageElement.setAttribute("src", "/assets/model1/nishimura2.jpeg");
       
-      for (  var i = 0;  i < imageTotalNumber;  i++  ) {
+      for (  let i = 0;  i < imageTotalNumber;  i++  ) {
  
         var liElement = document.createElement("li");
         console.log(imageListElement);
         liElement.style.backgroundImage = `url(/assets/model1/nishimura${i + 1}.jpeg)`;
+        
+        
+        liElement.addEventListener('click', () => {
+          mainImageElement.setAttribute("src", `/assets/model1/nishimura${i + 1}.jpeg`);
+        });
         
         imageListElement.appendChild(liElement);
       }
