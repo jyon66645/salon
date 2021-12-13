@@ -26,11 +26,9 @@
 
 <article id="detail"> 
     <ul id="tumb-pc">
- 
-      <li class="select"><img src="/thumb.php?src=content/images/SONS/tsuchikawa/konnpakutoshortbob/bob86_4.jpg&amp;h=70" height="70"></li> 
-      <li class=""><img src="/thumb.php?src=content/images/SONS/tsuchikawa/konnpakutoshortbob/bob86_2.jpg&amp;h=70" height="70"></li> 
-      <li class=""><img src="/thumb.php?src=content/images/SONS/tsuchikawa/konnpakutoshortbob/bob86_3.jpg&amp;h=70" height="70"></li> 
-      <li class=""><img src="/thumb.php?src=content/images/SONS/tsuchikawa/konnpakutoshortbob/bob86_1.jpg&amp;h=70" height="70"></li>
+ 　    <% Picture.where(cutmodel_id: @cutmodel.id).each do |picture| %>
+        <li class="select"><%= picture.image %></li> 
+      <% end %>
     </ul>
     <div id="main-style-image">
       <ul class="slides">
