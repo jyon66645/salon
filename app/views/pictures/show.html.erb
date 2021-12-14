@@ -22,10 +22,14 @@
     </nav><!-- / #nav-background -->
 
   </div><!-- / .page-header -->
+  <div id="toggle_menu" class="sp">
+    <div class="inner">
+      <div class="menu1"></div>
+      <div class="menu2"></div>
+      <div class="menu3"></div>
+    </div>
+  </div><!-- / #toggle_menu -->
 </header>
-
-
-
 
 <div class="hair-show">
     <ul id="imagelist" class="imagelist">
@@ -207,29 +211,52 @@
     -->
 
  
+<script>
   
-  <script>
+(function($){
+$(function() {
+		//ヘッダーメニューボタン
+	$("#toggle_menu").click(function(){
+	  
+		$("body").toggleClass("open");
+		$(".menu1").toggleClass("menuclick1");
+		$(".menu2").toggleClass("menuclick2");
+		$(".menu3").toggleClass("menuclick3");
+		
+		if($('body').hasClass('open')) {
+		} else {
+			$("#nav-background").addClass('close');
+			setTimeout(function() {
+				$("#nav-background").removeClass('close');
+			}, 500);
+		}
+		
+	});
+  
+});
+
+})(jQuery);
       
-      var imageTotalNumber = <%= Picture.where(cutmodel_id: @cutmodel.id).length.to_i %>;
-      var cutModelId = <%= @cutmodel.id.to_i %>;
-      var mainImageElement = document.getElementById("mainImage");
-      var imageListElement = document.getElementById("imagelist");
-      
-      mainImageElement.setAttribute("src", `/assets/model${cutModelId}/image1.jpeg`);
-      
-      for (  let i = 0;  i < imageTotalNumber;  i++  ) {
+var imageTotalNumber = <%= Picture.where(cutmodel_id: @cutmodel.id).length.to_i %>;
+var cutModelId = <%= @cutmodel.id.to_i %>;
+var mainImageElement = document.getElementById("mainImage");
+var imageListElement = document.getElementById("imagelist");
+
+mainImageElement.setAttribute("src", `/assets/model${cutModelId}/image1.jpeg`);
+
+for (  let i = 0;  i < imageTotalNumber;  i++  ) {
  
-        var liElement = document.createElement("li");
-        console.log(imageListElement);
-        liElement.style.backgroundImage = `url(/assets/model${cutModelId}/image${i + 1}.jpeg)`;
-        
-        
-        liElement.addEventListener('click', () => {
-          mainImageElement.setAttribute("src", `/assets/model${cutModelId}/image${i + 1}.jpeg`);
-        });
-        
-        imageListElement.appendChild(liElement);
-      }
+  var liElement = document.createElement("li");
+  console.log(imageListElement);
+  liElement.style.backgroundImage = `url(/assets/model${cutModelId}/image${i + 1}.jpeg)`;
+  
+  
+  liElement.addEventListener('click', () => {
+    mainImageElement.setAttribute("src", `/assets/model${cutModelId}/image${i + 1}.jpeg`);
+  });
+  
+  imageListElement.appendChild(liElement);
+}
       
       
   </script
