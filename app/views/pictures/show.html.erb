@@ -96,11 +96,21 @@
   <script>
       
       var imageTotalNumber = <%= Picture.where(cutmodel_id: @cutmodel.id).length.to_i %>;
+      
+      for (  let i = 0;  i < imageTotalNumber;  i++  ) {
+        var image = "<%= Picture.where(cutmodel_id: @cutmodel.id) %>";
+        console.log(image);
+      }
+      
+      
+      var cutModelId = <%= @cutmodel.id.to_i %>
       var mainImageElement = document.getElementById("mainImage");
       var imageListElement = document.getElementById("imagelist");
       
       
-      mainImageElement.setAttribute("src", "/assets/model1/nishimura2.jpeg");
+      
+      
+      mainImageElement.setAttribute("src", `/assets/${image[0].image}`);
       
       for (  let i = 0;  i < imageTotalNumber;  i++  ) {
  
