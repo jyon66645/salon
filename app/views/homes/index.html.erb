@@ -57,7 +57,7 @@
             <ul class="news-list">
               <% @model_ids[0].each do |id| %>
               <li>
-                <a href="#">
+                <a href="pictures/<%= Picture.find(id).cutmodel_id %>">
                   <div class="photo"><%= image_tag Picture.find(id).image, class: "hair-icon" %></div>
                   <div class="detail">
                     <span class="ttl"><%= Cutmodel.find(Picture.find(id).cutmodel_id).title %></span>
@@ -71,7 +71,7 @@
             <ul class="news-list">
               <% @model_ids[1].each do |id| %>
               <li>
-                <a href="#">
+                <a href="pictures/<%= Picture.find(id).cutmodel_id %>">
                   <div class="photo"><%= image_tag Picture.find(id).image, class: "hair-icon" %></div>
                   <div class="detail">
                     <span class="ttl"><%= Cutmodel.find(Picture.find(id).cutmodel_id).title %></span>
@@ -85,7 +85,7 @@
             <ul class="news-list">
               <% @model_ids[2].each do |id| %>
               <li>
-                <a href="#">
+                <a href="pictures/<%= Picture.find(id).cutmodel_id %>">
                   <div class="photo"><%= image_tag Picture.find(id).image, class: "hair-icon" %></div>
                   <div class="detail">
                     <span class="ttl"><%= Cutmodel.find(Picture.find(id).cutmodel_id).title %></span>
