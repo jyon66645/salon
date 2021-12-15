@@ -9,7 +9,13 @@
   /* 外側の余白を40pxにする */
   padding: 0;
   /* 内側の余白を消す(念のため) */ }
+  
+.hair-show {
+   font-family: 'Cormorant Garamond', serif;
+   text-align:center;
+}
 
+@media screen and (min-width: 767px) {
 .search-form {
   white-space: nowrap;
   margin-left: 8%;
@@ -80,9 +86,6 @@ SHOWページ
 詳細
 --------------------------------------------------------------------------------- */
 
-.hair-show {
-    margin-top:20px;
-}
 
 *, *::before, *::after {
     box-sizing:border-box;
@@ -169,7 +172,80 @@ SHOWページ
 	color: #666600;
 }
 
+}
 
+
+
+
+
+@media screen and (max-width: 767px) {
+
+  
+/*----------------------------------------------------------------
+SHOWページ
+----------------------------------------------------------------*/
+
+/*---------------------------------------------------------------------------------
+詳細
+--------------------------------------------------------------------------------- */
+
+
+*, *::before, *::after {
+    box-sizing:border-box;
+}
+
+.mainImage {
+    max-width :1100px;
+    width:100%;
+    padding:0 40px;
+    //margin: 0px 100px;
+    
+}
+
+.mainImage img {
+    width:100%;
+    border-bottom:solid 2px;
+}
+
+.imagelist {
+    maxwidth:1000px;
+    width:100%;
+    margin-bottom: 10px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    gap:0px 1%;
+    
+    //background:red;
+    
+}
+
+.imagelist li {
+    width:16%;
+    height:150px;
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:cover;
+    cursor:pointer;
+    transition:.3%;
+    
+}
+
+.imagelist li:hover {
+    opacity:.7;
+    transform:scale(1.05);
+}
+
+.stylist {
+  
+  
+}
+
+.info02-block {
+    
+}
+
+}
 
   
 
