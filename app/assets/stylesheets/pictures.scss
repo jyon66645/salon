@@ -4,6 +4,8 @@
 
 @charset "utf-8";
 
+
+
 .hair-index-body {
   margin: 20px;
   /* 外側の余白を40pxにする */
@@ -77,7 +79,77 @@
 	border-top:solid 3px #EEEEEE;
 	border-bottom:solid 3px #EEEEEE;
 }
-  
+
+.clearfix li {
+    display:inline;
+}
+
+}
+
+@media screen and (max-width: 767px) {
+    
+.search-form {
+    margin-top:70px;
+}
+
+.sort-list1 {
+    background:red;
+}
+
+.clearfix:after {
+	content: ""; 
+	display: block;
+	clear: both;
+	height: 0;
+	
+}
+
+.clearfix {
+    font-family: 'Cormorant Garamond', serif;
+}
+
+ul {
+    display: block;
+    padding-inline-start: 40px;
+    list-style-type: none;
+}
+
+li {
+    float: left;
+    padding-right: 3%;
+    width: 47%;
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+.sort-list {
+    padding: 5px 0px 5px 10px;
+    background-color: #F7F7F7;
+    margin:5px;
+}
+
+.sort-submit {
+    padding: 5px 0px 5px 10px;
+    background-color: #F7F7F7;
+    margin:5px;
+}
+
+#ttl-list {
+    
+	text-align: center;
+	margin-bottom: 40px;
+	margin-top: 40px;
+	border-top:solid 2px #EEEEEE;
+	border-bottom:solid 2px #EEEEEE;
+}
+
+.hair-picture {
+  height: 170px;
+  width: 240px;
+  margin: 5px;
+ }
+
+}
 /*----------------------------------------------------------------
 SHOWページ
 ----------------------------------------------------------------*/
@@ -86,7 +158,7 @@ SHOWページ
 詳細
 --------------------------------------------------------------------------------- */
 
-
+@media screen and (min-width: 767px) {
 *, *::before, *::after {
     box-sizing:border-box;
 }
@@ -172,23 +244,27 @@ SHOWページ
 	color: #666600;
 }
 
+//文字の大きさ指定
+.stylist-title {
+    text-align:left;
+    font-size: 24px;
+}
+
+.stylist-name {
+    font-size: 22px;
+}
+
+.price-title {
+    text-align:left;
+    vertical-align: bottom;
+    height:50px;
+    font-size: 24px;
+}
+
 }
 
 
-
-
-
 @media screen and (max-width: 767px) {
-
-  
-/*----------------------------------------------------------------
-SHOWページ
-----------------------------------------------------------------*/
-
-/*---------------------------------------------------------------------------------
-詳細
---------------------------------------------------------------------------------- */
-
 
 *, *::before, *::after {
     box-sizing:border-box;
@@ -236,14 +312,44 @@ SHOWページ
     transform:scale(1.05);
 }
 
-.stylist {
-  
-  
+//文字の大きさ指定
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  //border:solid 1px;
 }
 
-.info02-block {
-    
+.stylist-title {
+    text-align:center;
+    font-size: 15px;
 }
+
+.stylist-name {
+    font-size: 15px;
+}
+
+.price-title {
+    text-align:center;
+    vertical-align: bottom;
+    height:50px;
+    font-size: 15px;
+}
+
+.price {
+    font-size: 15px;
+}
+
+#info02-block {
+    margin-top:50px;
+    margin:70px;
+}
+
+#info02-block h4, p{
+    font-size:13px;
+}
+
+
 
 }
 

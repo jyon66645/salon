@@ -33,16 +33,17 @@
 <div class="hair-index-body">
   <div class="search-form">
     <%= search_form_for @q, url: pictures_path do |f| %>
+    <ul class="clearfix">
+      <li class="sort-list"><%= f.radio_button :category_eq, "NEW LINE" %>NEW LINE</li>
+      <li class="sort-list"><%= f.radio_button :category_eq, "Short", class: "sort-list2" %>SHORT</li>
+      <li class="sort-list"><%= f.radio_button :category_eq, "BOB", class: "sort-list3" %>BOB</li>
+      <li class="sort-list"><%= f.radio_button :category_eq, "Medium", class: "sort-list4" %>MEDIUM</li>
+      <li class="sort-list"><%= f.radio_button :category_eq, "Long", class: "sort-list5" %>LONG</li>
+      <li class="sort-list"><%= f.radio_button :category_eq, "MENs", class: "sort-list6" %>MENs</li>
+      <li class="sort-list"><%= f.radio_button :category_eq, "ARRENGE", class: "sort-list7" %>ARRENGE</li>
     
-      <%= f.radio_button :category_eq, "NEW LINE" %>NEW LINE
-      <%= f.radio_button :category_eq, "Short" %>SHORT
-      <%= f.radio_button :category_eq, "BOB" %>BOB
-      <%= f.radio_button :category_eq, "Medium" %>MEDIUM
-      <%= f.radio_button :category_eq, "Long" %>LONG
-      <%= f.radio_button :category_eq, "MENs" %>MENs
-      <%= f.radio_button :category_eq, "ARRENGE" %>ARRENGE
-    
-      <%= f.submit "絞り込む", class: "submit" %>
+      <li class="sort-submit"><%= f.submit "絞り込む", class: "submit" %></li>
+    </ul>
     <% end %>
   </div>
   
@@ -87,7 +88,7 @@
 
 <div id="footer-wrapper">
 <footer>
-    <h2><span class="copy function_LH_italic">Omotesando HAIR BRAND</span></h2>
+    <h2><li class="copy function_LH_italic">Omotesando HAIR BRAND</li></h2>
     <div class="sec01">
       <div class="salon">
         <h3>Double</h3>

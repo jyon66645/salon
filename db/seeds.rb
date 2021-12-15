@@ -14,14 +14,14 @@ Cutmodel.create!(stylist: "Koutarou Nishimura",
                  category: "Short"
                  )
                  
-Cutmodel.create!(stylist: "Stylist Naoto Tsuchikawa", 
+Cutmodel.create!(stylist: "Naoto Tsuchikawa", 
                  description:"襟足は少しタイトに、バックには丸みのあるシルエット。ポイントはサイドの髪をさりげなく頬にかかる長さにする事で、シンプルなボブでもちょっとしたアクセントと小顔効果をプラスしてくれます。コンパクトなヘアの中に女性らしさを演出してくれるスタイルです。", 
                  styling: "やわらかめのWAXを全体にかるく馴染ませて、少しだけ動きが出るようにセット。バック→サイド→全体を整えて→前髪を残りで軽くつけるような手順です。ヘアーオイルだけでさらっとミニボブ風にスタイリングするのもよいですね。",
                  title: "コンパクトなショートボブ",
                  category: "BOB"
                  )
 
-Cutmodel.create!(stylist: "Stylist Shota Matsui", 
+Cutmodel.create!(stylist: "Shota Matsui", 
                  description:"００年代リバイバル、マッシュウルフヘア。表面や顔まわりを中心に毛先の表情が出るようにカットし、柔らかく軽やかな動きを表現。少し甘めなヘアスタイルなので、アイメイクはやや強めに。サイドの髪の毛を耳にかけ、スリークにスタイリングするとモードな雰囲気も楽しめます。", 
                  styling: "ラフに仕上げたい時は、柔らかめのヘアクリームを毛先中心になじませて動きを出します。スリークに仕上げたい時は、オイルやバームなどをなじませ、タイトになでつけて完成です。",
                  title: "大人なマッシュウルフヘア",

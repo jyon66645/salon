@@ -40,20 +40,20 @@
         <div class="stylist">
           <table>
             <tr>
-              <th style="text-align:left;font-size: 24px;" colspan="2">Stylist</th>
+              <th class="stylist-title" colspan="2">Stylist</th>
             </tr>
             <tr>
-              <td style="font-size: 22px;" colspan="2"><%= @cutmodel.stylist %></td>
+              <td class="stylist-name" colspan="2"><%= @cutmodel.stylist %></td>
             </tr>
             <tr>
-              <th style="text-align:left;vertical-align: bottom;height:50px;font-size: 24px;" colspan="2">Price</th>
+              <th class="price-title" colspan="2">Price</th>
             </tr>
             <% @cutmodel.menu.each do |menu| %>
             <tr>
-              <td>
+              <td class="price">
                 <%= menu.name %>
               </td>
-              <td>
+              <td class="price">
                 ￥<%= menu.price %>〜
               </td>
             </tr>
@@ -74,8 +74,6 @@
       </div>
     </div>
 </div>
-
-
 
 <br><br><br>
 
