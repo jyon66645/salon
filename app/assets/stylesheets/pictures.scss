@@ -108,13 +108,13 @@
     font-family: 'Cormorant Garamond', serif;
 }
 
-ul {
+ul .clearfix {
     display: block;
     padding-inline-start: 40px;
     list-style-type: none;
 }
 
-li {
+.clearfix li {
     float: left;
     padding-right: 3%;
     width: 47%;
