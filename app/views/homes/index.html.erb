@@ -31,21 +31,14 @@
     </div><!-- / #toggle_menu -->
 </header>
 
-<div id="slide">
-  <ul>
-    <li><%= image_tag 'top/3.jpeg', height: '500px' %></li>
-    <li><%= image_tag 'top/14.jpeg', height: '500px' %></li>
-    <li><%= image_tag 'top/17.jpeg', height: '500px' %></li>
-    <li><%= image_tag 'top/20.jpeg', height: '500px' %></li>
-  </ul>
-</div>
+
 
 <div id="slide2">
   <ul>
-    <li><%= image_tag 'top/3.jpeg', height: '500px' %></li>
-    <li><%= image_tag 'top/14.jpeg', height: '500px' %></li>
-    <li><%= image_tag 'top/17.jpeg', height: '500px' %></li>
-    <li><%= image_tag 'top/20.jpeg', height: '500px' %></li>
+    <li><%= image_tag 'top/3.jpeg' %></li>
+    <li><%= image_tag 'top/14.jpeg' %></li>
+    <li><%= image_tag 'top/17.jpeg' %></li>
+    
   </ul>
 </div>
 
@@ -211,25 +204,6 @@ $(function() {
 
 })(jQuery);
 
-
-$(function(){
-// 設定
-var $interval = 5000; // 切り替わりの間隔（ミリ秒）
-var $fade_speed = 1000; // フェード処理の早さ（ミリ秒）
-
-$("#slide ul li").hide().css({"position":"absolute","top":0,"left":0});
-$("#slide ul li:first").addClass("active").show();
-
-setInterval(function(){
-  //alert("aa");
-var $active = $("#slide ul li.active");
-var $next = $active.next("li").length?$active.next("li"):$("#slide ul li:first");
-
-$active.fadeOut($fade_speed).removeClass("active");
-$next.fadeIn($fade_speed).addClass("active");
-},$interval);
-
-});
 
 $(function(){
 // 設定
