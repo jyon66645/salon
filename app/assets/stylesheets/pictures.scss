@@ -20,10 +20,11 @@
 @media screen and (min-width: 767px) {
 .search-form {
   white-space: nowrap;
-  margin-left: 8%;
+  //margin-left: 8%;
   font-family: 'Cormorant Garamond', serif;
   font-size: 22px;
   line-height: 5; 
+  
   
 }
 
@@ -164,11 +165,10 @@ SHOWページ
 }
 
 .mainImage {
-    max-width :1100px;
+    //max-width :1100px;
     width:100%;
     padding:0 40px;
-    margin: 0px 100px;
-    margin-left:12%;
+    
 }
 
 .mainImage img {
@@ -177,7 +177,7 @@ SHOWページ
 }
 
 .imagelist {
-    maxwidth:1000px;
+    //maxwidth:1000px;
     width:100%;
     margin-bottom: 10px;
     display:flex;
@@ -211,16 +211,17 @@ SHOWページ
 .stylist {
     position: absolute;
     top: 20px;
-    left: 0;
+    left: 6%;
     font-family: 'Cormorant Garamond', serif;
 }
 
 #info02-block {
 	padding-top: 15px;
 	padding-bottom: 35px;
-	width: 960px;
+	width: 500px;
+	//margin-right: auto;
+	margin-left: auto;
 	margin-right: auto;
-	margin-left: 26%;
 }
 #info02-block h4 {
 	text-align: center;
@@ -271,7 +272,7 @@ SHOWページ
 }
 
 .mainImage {
-    max-width :1100px;
+    
     width:100%;
     padding:0 40px;
     //margin: 0px 100px;
@@ -284,7 +285,7 @@ SHOWページ
 }
 
 .imagelist {
-    maxwidth:1000px;
+    
     width:100%;
     margin-bottom: 10px;
     display:flex;
@@ -342,7 +343,9 @@ table {
 
 #info02-block {
     margin-top:50px;
-    margin:70px;
+    margin-left:auto;
+    margin-right:auto;
+    width:400px;
 }
 
 #info02-block h4, p{
